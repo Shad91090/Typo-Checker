@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>X Typo Monitor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            width: 300px;
+            padding: 15px;
+            background-color: #f7f9fa;
+        }
+        h1 {
+            font-size: 16px;
+            color: #14171a;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        h1 img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        p {
+            font-size: 13px;
+            color: #657786;
+            margin: 0 0 15px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+        li {
+            font-size: 14px;
+            padding: 8px 12px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background-color: #1da1f2;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0c85d0;
+        }
+        button:disabled {
+            background-color: #aab8c2;
+            cursor: not-allowed;
+        }
+        #status {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+            color: #657786;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><img src="images/icon48.png" alt="icon">X Typo Monitor</h1>
+    <p>This extension automatically monitors handles for typos and will pop up an alert if one is found.</p>
+    <ul id="handles-list"></ul>
+    <button id="check-now-button">Check Now</button>
+    <p id="status"></p>
+    <script src="popup.js"></script>
+</body>
+</html>
